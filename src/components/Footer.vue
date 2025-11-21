@@ -364,6 +364,10 @@ const getPaymentLogoSvg = (type: 'visa' | 'mastercard' | 'amex' | null): string 
     padding: var(--spacing-gap-large) var(--spacing-text-gap);
   }
 
+  .footer-column {
+    margin-left: var(--spacing-gap-large);
+  }
+
   .footer-content {
     grid-template-columns: 1fr;
     gap: var(--spacing-gap-large);

@@ -146,7 +146,21 @@ const getReviewClass = (index: number, total: number): string => {
 
 @media (max-width: 768px) {
   .reviews-grid {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-content-gap);
+    padding-left: var(--spacing-text-gap);
+    padding-right: var(--spacing-text-gap);
+  }
+
+  .review-1st,
+  .review-2nd,
+  .review-3rd,
+  .review-4th,
+  .review-4th-of-5,
+  .review-5th {
+    grid-column: unset;
+    justify-self: unset;
   }
   
   .reviews-container {
@@ -155,6 +169,7 @@ const getReviewClass = (index: number, total: number): string => {
   
   .reviews-title {
     font-size: var(--font-size-title-medium);
+    padding-left: var(--spacing-text-gap);
   }
 }
 </style>

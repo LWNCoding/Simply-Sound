@@ -130,10 +130,18 @@ const props = defineProps<{
     padding-right: var(--spacing-text-gap);
     left: 0; /* Reset left offset on mobile */
   }
+
+  .introduction-text-section {
+    padding-left: 0;
+  }
   
   .introduction-title {
     font-size: var(--font-size-title-medium);
-    padding-left: var(--spacing-text-gap);
+    padding-left: 0;
+  }
+
+  .introduction-separator {
+    margin-left: 0;
   }
   
   .introduction-container {

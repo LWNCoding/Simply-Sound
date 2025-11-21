@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, computed } from 'vue'
+import { ref, computed, onMounted, onUnmounted } from 'vue'
 
 export interface CarouselItem {
   id: string | number
@@ -14,9 +14,24 @@ const props = defineProps<{
 }>()
 
 const currentIndex = ref(0)
-const visibleCards = 3
+const isMobile = ref(false)
 
-const totalPages = computed(() => Math.ceil(props.items.length / visibleCards))
+const visibleCards = computed(() => isMobile.value ? 1 : 3)
+
+const totalPages = computed(() => Math.ceil(props.items.length / visibleCards.value))
+
+const checkMobile = () => {
+  isMobile.value = window.innerWidth <= 768
+}
+
+onMounted(() => {
+  checkMobile()
+  window.addEventListener('resize', checkMobile)
+})
+
+onUnmounted(() => {
+  window.removeEventListener('resize', checkMobile)
+})
 
 const nextPage = () => {
   currentIndex.value = (currentIndex.value + 1) % totalPages.value
@@ -30,6 +45,10 @@ const carouselTransform = computed(() => {
   if (currentIndex.value === 0) {
     return `translateX(0)`
   }
+  if (isMobile.value) {
+    return `translateX(-${currentIndex.value * 40}%)`
+  }
+  // On desktop, move by one page width plus gap
   return `translateX(calc(-${currentIndex.value * 100}% - var(--spacing-gap)))`
 })
 </script>
@@ -47,7 +66,7 @@ const carouselTransform = computed(() => {
         </button>
         
         <div class="carousel-track">
-          <div class="carousel-items" :style="{ transform: carouselTransform, width: `${totalPages * 100}%` }">
+          <div class="carousel-items" :style="{ transform: carouselTransform, width: isMobile.value ? `${props.items.length * 100}%` : `${totalPages.value * 100}%` }">
             <div class="carousel-card" v-for="item in props.items" :key="item.id">
             <div class="carousel-image-container">
               <img :src="item.image" :alt="item.title || `Item ${item.id}`" class="carousel-image" />
@@ -159,6 +178,31 @@ const carouselTransform = computed(() => {
   padding: var(--spacing-card-padding) var(--spacing-card-padding) 0 var(--spacing-card-padding);
   display: flex;
   flex-direction: column;
+}
+
+@media (max-width: 768px) {
+  .carousel-nav {
+    width: 36px;
+    height: 36px;
+  }
+
+  .carousel-card {
+    flex: 0 0 100%;
+    aspect-ratio: 4 / 5;
+    max-width: 300px;
+    margin: 0 auto;
+    padding: var(--spacing-card-padding);
+  }
+
+  .carousel-image {
+    max-height: 200px;
+    object-fit: contain;
+  }
+
+  .carousel-title {
+    padding-left: var(--spacing-text-gap);
+    text-align: center;
+  }
 }
 
 .carousel-image-container {

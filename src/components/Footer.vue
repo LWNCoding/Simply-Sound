@@ -14,7 +14,7 @@ export interface PaymentMethod {
   name: string
 }
 
-const props = defineProps<{
+defineProps<{
   contact?: ContactInfo[]
   socialLinks?: SocialLink[]
   paymentMethods?: PaymentMethod[]

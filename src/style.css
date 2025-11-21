@@ -1,0 +1,213 @@
+:root {
+  font-family: "Baskerville", "Baskerville Old Face", "Hoefler Text", Garamond, serif;
+  line-height: 1.5;
+  font-weight: 300;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #ffffff;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Color variables */
+  --color-bg-section-primary: #F8F3EC;
+  --color-bg-section-secondary: #EADED0;
+  --color-bg-footer: #eaded0;
+  --color-bg-white: #ffffff;
+  --color-text-primary: #000000;
+  --color-text-secondary: #2A2A2A;
+  --color-accent: #6F5A46;
+  --color-accent-dark: #4D3C2C;
+  --color-white: #ffffff;
+  --color-border: #333333;
+  --color-border-light: #dddddd;
+  --color-bg-light: #f5f5f5;
+  --color-bg-light-hover: #e5e5e5;
+  --color-bg-light-active: #d5d5d5;
+  --color-text-light-hover: #d1f7b2;
+  
+  /* Opacity */
+  --opacity-separator: 0.3;
+  
+  /* Spacing - Base units */
+  --spacing-nav-button: 64px;
+  --spacing-gap: 1rem;
+  --spacing-gap-small: 0.5rem;
+  --spacing-gap-large: 2rem;
+  --spacing-text-gap: 1rem;
+  
+  /* Spacing - Section level */
+  --spacing-section-padding: 3rem;
+  --spacing-section-margin-top: 4rem;
+  --spacing-container-bottom: 1.5rem;
+  
+  /* Spacing - Title level */
+  --spacing-title-bottom: 1.5rem;
+  --spacing-title-bottom-large: 2rem;
+  
+  /* Spacing - Content level */
+  --spacing-content-gap: 2rem;
+  --spacing-separator-bottom: 1.5rem;
+  --spacing-content-internal: 0.5rem;
+  --spacing-content-medium: 1.5rem;
+  
+  /* Spacing - Component specific */
+  --spacing-card-padding: 35px;
+  --spacing-nav-padding-horizontal: 1.5rem;
+  --spacing-nav-padding-vertical: 1rem;
+  
+  /* Typography */
+  --font-size-title-large: 2.5rem;
+  --font-size-title-medium: 1.75rem;
+  --font-size-title-small: 2rem;
+  --font-size-body-large: 1.5rem;
+  --font-size-body-medium: 1rem;
+  --font-size-body-small: 1.1rem;
+  --font-size-icon-large: 2.5rem;
+  
+  /* Layout */
+  --layout-footer-max-width: 1200px;
+  --layout-introduction-offset: 2.3rem;
+  
+  /* Font weights */
+  --font-weight-light: 300;
+  --font-weight-normal: 500;
+  --font-weight-bold: 525;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Global font weight inheritance */
+*,
+*::before,
+*::after {
+  font-weight: inherit;
+}
+
+/* Full-width section utility */
+.full-width-section {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+/* Common container */
+.content-container {
+  width: 80%;
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Section title alignment */
+.section-title-aligned {
+  padding-left: calc(var(--spacing-nav-button) + var(--spacing-gap));
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  font-weight: 300;
+  overflow-x: hidden;
+}
+
+#app {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6,
+p, span, div, a, button, input, textarea, select, label {
+  font-weight: 300;
+}
+
+a {
+  color: #646cff;
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: #535bf2;
+}
+
+button {
+  font-weight: 300;
+  font-family: inherit;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  cursor: pointer;
+  transition: border-color 0.25s, background-color 0.2s, color 0.2s;
+  background-color: #1a1a1a;
+  color: white;
+}
+
+button:hover {
+  border-color: #646cff;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+code {
+  font-weight: 300;
+  background-color: #1a1a1a;
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+  font-family: monospace;
+}
+
+/* Common transitions */
+.transition {
+  transition: background-color 0.2s, color 0.2s;
+}
+
+/* Responsive breakpoints */
+@media (max-width: 768px) {
+  /* Mobile styles can be added here */
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  
+  a:hover {
+    color: #747bff;
+  }
+  
+  button {
+    background-color: #f9f9f9;
+    color: #213547;
+  }
+  
+  code {
+    background-color: #f9f9f9;
+  }
+}
+

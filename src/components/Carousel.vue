@@ -66,7 +66,7 @@ const carouselTransform = computed(() => {
         </button>
         
         <div class="carousel-track">
-          <div class="carousel-items" :style="{ transform: carouselTransform, width: isMobile.value ? `${props.items.length * 100}%` : `${totalPages.value * 100}%` }">
+          <div class="carousel-items" :style="{ transform: carouselTransform, width: isMobile ? `${props.items.length * 100}%` : `${totalPages * 100}%` }">
             <div class="carousel-card" v-for="item in props.items" :key="item.id">
             <div class="carousel-image-container">
               <img :src="item.image" :alt="item.title || `Item ${item.id}`" class="carousel-image" />

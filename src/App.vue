@@ -13,37 +13,37 @@ import type { Review } from './components/Reviews.vue'
 const carouselItems: CarouselItem[] = [
   {
     id: 1,
-    image: 'public/images/image-1.jpg',
+    image: '/images/image-1.jpg',
     title: 'Lorem ipsum',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
   },
   {
     id: 2,
-    image: 'public/images/image-2.jpg',
+    image: '/images/image-2.jpg',
     title: 'Lorem ipsum',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
   },
   {
     id: 3,
-    image: 'public/images/image-3.jpg',
+    image: '/images/image-3.jpg',
     title: 'Lorem ipsum',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
   },
   {
     id: 4,
-    image: 'public/images/image-4.jpg',
+    image: '/images/image-4.jpg',
     title: 'Lorem ipsum',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
   },
   {
     id: 5,
-    image: 'public/images/image-5.jpg',
+    image: '/images/image-5.jpg',
     title: 'Lorem ipsum',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
   },
   {
     id: 6,
-    image: 'public/images/image-6.jpg',
+    image: '/images/image-6.jpg',
     title: 'Lorem ipsum',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
   }
@@ -117,10 +117,10 @@ const reviews: Review[] = [
     <Introduction 
       title="ABOUT" 
       text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-      imagePath="public/images/profile.jpeg"
+      imagePath="/images/profile.jpeg"
       imageAlt="Shannon - Simply Sound"
     />
-    <FullWidthImage imagePath="public/images/banner_playing.png" />
+    <FullWidthImage imagePath="/images/banner_playing.png" />
     <Carousel title="SESSIONS" :items="carouselItems" />
     <NewsletterSignup />
     <Reviews title="CUSTOMER REVIEWS" :reviews="reviews" />

@@ -33,44 +33,44 @@
   --opacity-separator: 0.3;
   
   /* Spacing - Base units */
-  --spacing-nav-button: 64px;
-  --spacing-gap: 1rem;
-  --spacing-gap-small: 0.5rem;
-  --spacing-gap-large: 2rem;
-  --spacing-text-gap: 1rem;
+  --spacing-nav-button: 42.88px;
+  --spacing-gap: 0.67rem;
+  --spacing-gap-small: 0.335rem;
+  --spacing-gap-large: 1.34rem;
+  --spacing-text-gap: 0.67rem;
   
   /* Spacing - Section level */
-  --spacing-section-padding: 3rem;
+  --spacing-section-padding: 2.01rem;
   --spacing-section-margin-top: 4rem;
-  --spacing-container-bottom: 1.5rem;
+  --spacing-container-bottom: 1.005rem;
   
   /* Spacing - Title level */
-  --spacing-title-bottom: 1.5rem;
-  --spacing-title-bottom-large: 2rem;
+  --spacing-title-bottom: 1.005rem;
+  --spacing-title-bottom-large: 1.34rem;
   
   /* Spacing - Content level */
-  --spacing-content-gap: 2rem;
-  --spacing-separator-bottom: 1.5rem;
-  --spacing-content-internal: 0.5rem;
-  --spacing-content-medium: 1.5rem;
+  --spacing-content-gap: 1.34rem;
+  --spacing-separator-bottom: 1.005rem;
+  --spacing-content-internal: 0.335rem;
+  --spacing-content-medium: 1.005rem;
   
   /* Spacing - Component specific */
-  --spacing-card-padding: 35px;
-  --spacing-nav-padding-horizontal: 1.5rem;
-  --spacing-nav-padding-vertical: 1rem;
+  --spacing-card-padding: 23.45px;
+  --spacing-nav-padding-horizontal: 1.005rem;
+  --spacing-nav-padding-vertical: 0.67rem;
   
   /* Typography */
-  --font-size-title-large: 2.5rem;
-  --font-size-title-medium: 1.75rem;
-  --font-size-title-small: 2rem;
-  --font-size-body-large: 1.5rem;
-  --font-size-body-medium: 1rem;
-  --font-size-body-small: 1.1rem;
-  --font-size-icon-large: 2.5rem;
+  --font-size-title-large: 1.675rem;
+  --font-size-title-medium: 1.1725rem;
+  --font-size-title-small: 1.34rem;
+  --font-size-body-large: 1.005rem;
+  --font-size-body-medium: 0.67rem;
+  --font-size-body-small: 0.737rem;
+  --font-size-icon-large: 1.675rem;
   
   /* Layout */
-  --layout-footer-max-width: 1200px;
-  --layout-introduction-offset: 2.3rem;
+  --layout-footer-max-width: 804px;
+  --layout-introduction-offset: 1.541rem;
   
   /* Font weights */
   --font-weight-light: 300;

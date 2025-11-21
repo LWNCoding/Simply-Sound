@@ -41,7 +41,7 @@ const carouselTransform = computed(() => {
       
       <div class="carousel-wrapper">
         <button class="carousel-nav carousel-nav-prev" @click="prevPage" aria-label="Previous">
-          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg class="carousel-arrow" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </button>
@@ -59,7 +59,7 @@ const carouselTransform = computed(() => {
         </div>
       
         <button class="carousel-nav carousel-nav-next" @click="nextPage" aria-label="Next">
-          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg class="carousel-arrow" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </button>
@@ -122,6 +122,13 @@ const carouselTransform = computed(() => {
 .carousel-nav:hover {
   background-color: var(--color-text-primary);
   color: var(--color-white);
+}
+
+.carousel-arrow {
+  width: 100%;
+  height: 100%;
+  min-width: 48px;
+  max-width: 48px;
 }
 
 .carousel-track {
